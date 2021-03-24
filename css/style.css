@@ -1,5 +1,6 @@
 :root {
   --primary-color: #09fcfd;
+  --secondary-color: #510303;
   --size-unit: 64px;
   --ships-animation-time: 200ms;
   --explosions-animations-time: 600ms;
@@ -80,7 +81,7 @@ body {
   width: var(--size-unit);
   height: var(--size-unit);
   background-image: url("../images/ship.png");
-  animation: move-8-units-X var(--ships-animation-time) steps(8) forwards;
+  animation: move-8-units-X var(--ships-animation-time) steps(8) infinite;
   position: fixed;
 }
 
@@ -88,7 +89,7 @@ body {
   width: var(--size-unit);
   height: var(--size-unit);
   background-image: url("../images/enemy.png");
-  animation: move-5-units-X var(--ships-animation-time) steps(5) forwards;
+  animation: move-5-units-X var(--ships-animation-time) steps(5) infinite;
   position: fixed;
 }
 
@@ -96,7 +97,7 @@ body {
   width: calc(var(--size-unit) * 2);
   height: calc(var(--size-unit) * 2);
   background-image: url("../images/enemy-big.png");
-  animation: move-16-units-X var(--ships-animation-time) steps(8) forwards;
+  animation: move-16-units-X var(--ships-animation-time) steps(8) infinite;
   position: fixed;
 }
 
@@ -178,4 +179,8 @@ body {
 
 .hide {
   display: none;
+}
+
+.hit {
+  background-color: var(--secondary-color);
 }
